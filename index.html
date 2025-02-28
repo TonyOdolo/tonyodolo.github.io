@@ -4,30 +4,34 @@
     <title>Weather Widget</title>
     <style>
         /* Make the body take up full width with no margins */
-        body {
+        html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: visible; /* Allow content to be fully visible */
         }
         
-        /* Make the Elfsight widget container wider */
+        /* Make the Elfsight widget container larger and centered */
         .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 {
             width: 100% !important; /* Force 100% width */
-            max-width: 1200px !important; /* Increased maximum width */
-            height: 600px !important; /* Keep the height */
+            max-width: 800px !important; /* Set a maximum width if needed */
+            height: 600px !important; /* Increase height to show all days */
             min-height: 600px !important; /* Ensure minimum height */
-            margin: 0 auto; /* Center the widget */
+            margin: 0 auto !important; /* Center the widget */
             overflow: visible !important; /* Ensure content isn't cut off */
-            transform: scale(1.2); /* Scale up the widget slightly */
-            transform-origin: top left; /* Scale from top left */
+            display: block !important; /* Ensure proper display */
+            position: relative !important; /* Ensure positioning works */
+            left: 50% !important; /* Center horizontally */
+            transform: translateX(-50%) !important; /* Adjust for centering */
         }
         
         /* Target internal elements of the widget to ensure they scale properly */
         .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 * {
-            max-width: none !important; /* Remove max-width restriction */
-            width: auto !important; /* Let elements size naturally */
+            max-width: 100% !important;
         }
         
         /* Target the forecast days container specifically */
@@ -36,14 +40,8 @@
             height: auto !important;
             min-height: 400px !important;
             display: flex !important;
-            width: 100% !important; /* Ensure full width */
-        }
-        
-        /* Target any horizontal containers */
-        .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 [class*="container"],
-        .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 [class*="wrapper"] {
-            width: 100% !important;
-            max-width: 100% !important;
+            flex-direction: column !important;
+            margin: 0 auto !important; /* Center these elements too */
         }
     </style>
 </head>
