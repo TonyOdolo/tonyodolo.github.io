@@ -2,11 +2,32 @@
 <html>
 <head>
     <title>Weather Widget</title>
+    <style>
+        /* Make the body take up full width with no margins */
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        
+        /* Make the Elfsight widget container wider */
+        .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 {
+            width: 100% !important; /* Force 100% width */
+            max-width: 800px !important; /* Set a maximum width if needed */
+            margin: 0 auto; /* Center the widget */
+            overflow: visible !important; /* Ensure content isn't cut off */
+        }
+        
+        /* Target internal elements of the widget to ensure they scale properly */
+        .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 * {
+            max-width: 100% !important;
+        }
+    </style>
 </head>
 <body>
     <div class="elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2" data-elfsight-app-lazy></div>
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
 </body>
 </html>
-
 
