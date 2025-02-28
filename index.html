@@ -1,27 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nairobi Weather for LIF Gathering 2025</title>
+    <title>Weather Widget</title>
     <style>
-        body { 
-            margin: 0; 
-            padding: 0; 
-            font-family: Arial, sans-serif;
-            background-color: transparent;
-        }
-        .widget-container {
-            width: 100%;
-            max-width: 230px;
-        }
+        body { margin: 0; padding: 0; }
     </style>
 </head>
 <body>
-    <div class="widget-container">
-        <!-- Modified iframe with fewer sandbox restrictions -->
-        <iframe src="https://www.meteoblue.com/en/weather/widget/daily/nairobi_kenya_184745?geoloc=fixed&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=1&maxtemperature=1&mintemperature=1&windspeed=1&windgust=1&winddirection=1&uv=1&humidity=1&precipitation=1&precipitationprobability=1&spot=1&pressure=0&layout=dark" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="width: 230px; height: 444px"></iframe>
-        <div style="font-size: 12px; text-align: center; margin-top: 5px;">
-            <a href="https://www.meteoblue.com/en/weather/week/nairobi_kenya_184745?utm_source=daily_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener" style="color: #4285f4; text-decoration: none;">Weather data by meteoblue</a>
-        </div>
-    </div>
+    <div id="ww_c48be972d2f74" v='1.3' loc='auto' a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"rgba(28,40,46,1)","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'><a href="https://weatherwidget.org/" id="ww_c48be972d2f74_u" target="_blank">Weather Widget</a></div>
+    <script async src="https://app3.weatherwidget.org/js/?id=ww_c48be972d2f74"></script>
 </body>
 </html>
