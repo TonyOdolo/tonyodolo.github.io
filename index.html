@@ -3,42 +3,37 @@
 <head>
     <title>Weather Widget</title>
     <style>
-        /* Base styles */
+        /* Make the body take up full width with no margins */
         body {
             margin: 0;
             padding: 0;
             width: 100%;
-            overflow-x: auto; /* Allow horizontal scrolling if needed */
+            height: 100%;
+            overflow: visible; /* Allow content to be fully visible */
         }
         
-        /* Make the Elfsight widget container properly sized */
+        /* Make the Elfsight widget container larger */
         .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 {
-            width: 100% !important;
+            width: 100% !important; /* Force 100% width */
+            max-width: 800px !important; /* Set a maximum width if needed */
+            height: 600px !important; /* Increase height to show all days */
+            min-height: 600px !important; /* Ensure minimum height */
+            margin: 0 auto; /* Center the widget */
+            overflow: visible !important; /* Ensure content isn't cut off */
+        }
+        
+        /* Target internal elements of the widget to ensure they scale properly */
+        .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 * {
             max-width: 100% !important;
-            overflow-x: auto !important; /* Enable horizontal scrolling */
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
         }
         
-        /* Force the internal scrollable elements to show */
-        .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 [class*="scrollable"],
-        .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 [class*="days"],
-        .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 [class*="forecast"] {
-            overflow-x: auto !important;
+        /* Target the forecast days container specifically */
+        .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 [class*="forecast"],
+        .elfsight-app-d07ed5a8-8b84-44ad-a940-2a0da5c3d6e2 [class*="days"] {
+            height: auto !important;
+            min-height: 400px !important;
             display: flex !important;
-            max-width: none !important;
-            width: auto !important;
-            min-width: 100% !important;
-        }
-        
-        /* Make sure the scrollbar is visible */
-        ::-webkit-scrollbar {
-            height: 8px;
-            background-color: #f1f1f1;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background-color: #888;
-            border-radius: 4px;
+            flex-direction: column !important;
         }
     </style>
 </head>
